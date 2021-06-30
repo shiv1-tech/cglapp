@@ -1,0 +1,83 @@
+<MainScreen>:
+    Screen:
+        name:'cgl_bdwt'
+        FloatLayout:
+            canvas.before:
+                Color:
+                    rgba:0.4,0.6,.6,1
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Label:
+                text:'GP-Thick'
+                pos_hint:{'x':.02,'y':.6}
+                size_hint:.3,.1
+
+            TextInput:
+                text:''
+                id:cgl_thk
+                pos_hint:{'x':.25,'y':.60}
+                size_hint:.2,.1
+            Label:
+                text:'GP-Width'
+                pos_hint:{'x':.02,'y':.5}
+                size_hint:.3,.1
+
+            TextInput:
+                text:''
+                id:cgl_width
+                pos_hint:{'x':.25,'y':.50}
+                size_hint:.2,.1
+                edit:False
+            Label:
+                text:'Min\n bdwt'
+
+                pos_hint:{'x':.25,'y':.40}
+                size_hint:.2,.1
+                edit:False
+            Label:
+                text:'Avg\n bdwt'
+
+                pos_hint:{'x':.25,'y':.30}
+                size_hint:.2,.1
+
+            Label:
+                text:'Max\n bdwt'
+
+                pos_hint:{'x':.25,'y':.20}
+                size_hint:.2,.1
+                edit:False
+            Label:
+                text:''
+                id:minbdwt
+                pos_hint:{'x':.45,'y':.40}
+                size_hint:.2,.1
+                edit:False
+            Label:
+                text:''
+                id:avgbdwt
+                pos_hint:{'x':.45,'y':.30}
+                size_hint:.2,.1
+
+            Label:
+                text:''
+                id:maxbdwt
+                pos_hint:{'x':.45,'y':.20}
+                size_hint:.2,.1
+                edit:False
+            Label:
+                text:''
+                id:warning
+                pos_hint:{'x':.45,'y':.20}
+                size_hint:.2,.1
+                edit:False
+
+            Button:
+                text:'GP\n bundle-wt'
+
+                pos_hint:{'x':.45,'y':.01}
+                size_hint:.2,.08
+                on_press:app.CgBdwt()
+MainScreen:
+
+
