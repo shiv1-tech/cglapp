@@ -1,0 +1,26 @@
+name: Build
+on:
+  push:
+
+jobs:caculat_bdwt
+
+defaults:
+  name: Build for Android
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build with Buildozer
+      uses: ArtemSBulgakov/buildozer-action@v1
+      id: buildozer
+      with:
+        workdir: c:\kivy_or\ccl\cglapp
+        buildozer_version: stable
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: package
+        path: ${{ steps.buildozer.outputs.filename }}
